@@ -16,9 +16,8 @@ class Product:
             raise InsufficientStockError(f"Товара недостаточно. На складе: {self.quantity}, требуется: {amount}")
         self.quantity -= amount
         
-    def get_total_price(self):
-        tax = 0.2
-        return round(self.price * self.quantity * (1 + tax), 2)
+    def get_total_price(self, discount=0.0, tax=0.0):
+        return round(self.price * self.quantity * (1 - discount) * (1 + tax), 2)
     
     def __lt__(self, other):
         if isinstance(other, Product):
