@@ -1,0 +1,14 @@
+Анализ изменений между ветками
+
+feature/add-logging vs main:
+- добавлен файл src/utils/logger.py
+- новая функция log(message) для вывода логов
+
+feature/add-caching vs main:
+- добавлен файл src/utils/cache.py
+- простое кэширование через словарь _cache
+- функции get(key) и set(key, value)
+
+Обе ветки меняли разные файлы — конфликта не было.
+Конфликт возник только когда feature/add-discount и feature/round-price
+обе изменили один и тот же метод get_total_price в product.py.

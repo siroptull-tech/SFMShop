@@ -1,0 +1,24 @@
+commit f9e3b0fc24e03a9a978528a420c63647332ed6d3
+Merge: accd915 3e1bdf7
+Author: Александр Горбунов~ <aleksandr-sarov@mail.ru>
+Date:   Mon Aug 17 23:26:21 2026 +0300
+
+    Разрешён конфликт в get_total_price: скидка + округление
+
+diff --cc src/models/product.py
+index 21ca0a7,c78562d..a60b6fb
+--- a/src/models/product.py
++++ b/src/models/product.py
+@@@ -17,8 -17,8 +17,8 @@@ class Product
+          self.quantity -= amount
+          
+      def get_total_price(self):
+-         # ветка feature/add-discount: цена со скидкой
+-         return self.price * self.quantity * 0.9
+ -        # ветка feature/round-price: округляем сумму до двух знаков
+ -        return round(self.price * self.quantity, 2)
+++        # объединили обе ветки: скидка, затем округление
+++        return round(self.price * self.quantity * 0.9, 2)
+      
+      def get_category(self):
+          if self.price >= 30000:

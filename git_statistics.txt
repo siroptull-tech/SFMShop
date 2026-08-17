@@ -1,0 +1,122 @@
+commit 2342a9a5b3cf4a650e7c0ed1d72acaf6e7f759d0
+Author: Александр Горбунов~ <aleksandr-sarov@mail.ru>
+Date:   Mon Aug 17 22:38:57 2026 +0300
+
+    Добавлен метод get_category в Product
+
+ src/models/product.py | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+commit 56027bd2c338378a12f7f9dbc74e0dc888326481
+Author: Александр Горбунов~ <aleksandr-sarov@mail.ru>
+Date:   Mon Aug 17 22:37:52 2026 +0300
+
+    Обновлён класс User
+
+ src/models/user.py | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+commit effff8f14d00b932613ec04fcd04518be9396b3f
+Merge: b8170cf 0460664
+Author: Александр Горбунов~ <aleksandr-sarov@mail.ru>
+Date:   Mon Aug 17 22:36:51 2026 +0300
+
+    Разрешен конфликт в get_total_price
+
+commit b8170cf7a32368fb773c7b0222a75740f4f7c110
+Author: Александр Горбунов~ <aleksandr-sarov@mail.ru>
+Date:   Mon Aug 17 22:36:40 2026 +0300
+
+    Изменен метод get_total_price в main
+
+ src/models/product.py | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 0460664ce76f452958a4bab41b7dfa66cf31a7b0
+Author: Александр Горбунов~ <aleksandr-sarov@mail.ru>
+Date:   Mon Aug 17 22:36:31 2026 +0300
+
+    Изменен метод get_total_price в feature/test-conflict
+
+ src/models/product.py | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 5eb25ca6918352af5d419b1d42f9cb52f898674e
+Author: Александр Горбунов~ <aleksandr-sarov@mail.ru>
+Date:   Mon Aug 17 22:32:05 2026 +0300
+
+    Удалён файл my_main.py
+
+ src/my_main.py | 2 --
+ 1 file changed, 2 deletions(-)
+
+commit 15bb17825480516c5823b54c70c3ac0df4480ed9
+Author: Александр Горбунов~ <aleksandr-sarov@mail.ru>
+Date:   Mon Aug 17 21:50:04 2026 +0300
+
+    Добавлены модели SFMShop
+
+ src/models/__init__.py       |  0
+ src/models/exceptions.py     | 17 ++++++++++
+ src/models/order.py          | 31 +++++++++++++++++
+ src/models/payment.py        | 22 ++++++++++++
+ src/models/user.py           | 18 ++++++++++
+ src/utils/__init__.py        |  0
+ src/utils/calculations.py    | 11 ++++++
+ src/utils/order_processor.py | 81 ++++++++++++++++++++++++++++++++++++++++++++
+ src/utils/validators.py      |  9 +++++
+ 9 files changed, 189 insertions(+)
+
+commit 5a68ed93738e84333aa7b265f3c85b139ad15c6a
+Author: Александр Горбунов~ <aleksandr-sarov@mail.ru>
+Date:   Mon Aug 17 21:49:59 2026 +0300
+
+    Добавлен базовый код SFMShop
+
+ data/orders.txt                  |    5 +
+ data/processed_orders.txt        |    2 +
+ data/processed_orders_report.txt |    4 +
+ data/products.txt                |    3 +
+ data/products_with_prices.txt    |    3 +
+ requirements.txt                 |    1 +
+ src/__init__.py                  |    0
+ src/main.py                      | 1045 ++++++++++++++++++++++++++++++++++++++
+ src/my_main.py                   |    2 +
+ src/notes.txt                    |    0
+ 10 files changed, 1065 insertions(+)
+
+commit 51f7fcbcea25e11365550876915adc3ac1801007
+Author: Александр Горбунов~ <aleksandr-sarov@mail.ru>
+Date:   Mon Aug 17 21:42:29 2026 +0300
+
+    Добавлена структура для моделей
+
+ src/models/product.py | 36 ++++++++++++++++++++++++++++++++++++
+ 1 file changed, 36 insertions(+)
+
+commit 62d35ea3dee6d19ac030f0e16ef4c6d916b9c204
+Author: Александр Горбунов~ <aleksandr-sarov@mail.ru>
+Date:   Mon Aug 17 21:41:45 2026 +0300
+
+    Добавлен .gitignore для проекта SFMShop
+
+ .gitignore | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 2d0f78cf3cadc0c27ddd0078e08c35e57a9347f5
+Author: Александр Горбунов~ <aleksandr-sarov@mail.ru>
+Date:   Mon Aug 17 21:32:57 2026 +0300
+
+    Добавлен NOTES.md с конспектом по git
+
+ NOTES.md | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 3f60eed9312448e88ea373dda8c675742b945e83
+Author: Александр Горбунов~ <aleksandr-sarov@mail.ru>
+Date:   Mon Aug 17 21:32:04 2026 +0300
+
+    Инициализация проекта SFMShop
+
+ README.md | 6 ++++++
+ 1 file changed, 6 insertions(+)
