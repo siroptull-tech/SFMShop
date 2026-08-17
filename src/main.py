@@ -1,0 +1,1045 @@
+
+# ===== Задача 1 =====
+# company_name = "SFMShop"
+
+# welcome_message = "Добро пожаловать в " + company_name + "!"
+# slogan = company_name + " - лучший выбор для покупок"
+# email_subject = "Спасибо за покупку в " + company_name
+
+# print(welcome_message)
+# print(slogan)
+# print(email_subject)
+
+# raw_name_1 = "ИВАН"
+# raw_name_2 = "мария"
+# raw_name_3 = "пЕТР"
+
+# new_name_1 = raw_name_1.capitalize()
+# new_name_2 = raw_name_2.capitalize()
+# new_name_3 = raw_name_3.capitalize()
+
+# print(new_name_1)
+# print(new_name_2)
+# print(new_name_3)
+
+# price = "1999"
+
+# new_price = "от " + price + " руб."
+# print(new_price)
+
+
+
+# ===== Задача 2 =====
+# name_1 = "  ИВАН  "
+# name_2 = "мария"
+# name_3 = "  пЕТР  "
+# name_4 = "АННА"
+# name_5 = "  олег  "
+
+# norm_name_1 = name_1.strip().capitalize()
+# norm_name_2 = name_2.strip().capitalize()
+# norm_name_3 = name_3.strip().capitalize()
+# norm_name_4 = name_4.strip().capitalize()
+# norm_name_5 = name_5.strip().capitalize()
+
+# print(norm_name_1)
+# print(norm_name_2)
+# print(norm_name_3)
+# print(norm_name_4)
+# print(norm_name_5)
+
+# product_1_price_usd = 29.99
+# product_2_price_usd = 49.99
+# product_3_price_usd = 99.99
+
+# curs = 75.5
+
+# price_usd_for_rub_1 = round(curs * product_1_price_usd, 2)
+# price_usd_for_rub_2 = round(curs * product_2_price_usd, 2)
+# price_usd_for_rub_3 = round(curs * product_3_price_usd, 2)
+
+# print(price_usd_for_rub_1)
+# print(price_usd_for_rub_2)
+# print(price_usd_for_rub_3)
+
+# price_per_item = 1500.0
+# quantity = 3
+# discount = 0.1 # 10% скидка
+
+# final_price = round(price_per_item * quantity * (1 - discount), 2)
+
+# print(final_price)
+
+
+
+# ===== Задача 3 =====
+# order_1_price = 2000.0
+# order_1_quantity = 2
+# order_1_discount = 0.15
+# order_1_final_price = round(order_1_price * order_1_quantity * (1 - order_1_discount), 2)
+# discount_amount_1 = order_1_price * order_1_discount
+# print("Заказ 1: ")
+# print("Исходная цена: " + str(order_1_price * order_1_quantity) + " руб.")
+# print("Размер скидки: " + str(discount_amount_1) + " руб.")
+# print("Итоговая стоимость: " + str(order_1_final_price) + " руб.")
+
+# order_2_price = 3000.0
+# order_2_quantity = 1
+# order_2_discount = 0.0
+# discount_amount_2 = order_2_price * order_2_discount
+# order_2_final_price = round(order_2_price * order_2_quantity * (1 - order_2_discount), 2)
+# print("Заказ 2: ")
+# print("Исходная цена: " + str(order_2_price * order_2_quantity) + " руб.")
+# print("Размер скидки: " + str(discount_amount_2) + " руб.")
+# print("Итоговая стоимость: " + str(order_2_final_price) + " руб.")
+
+# order_3_price = 5000.0
+# order_3_quantity = 3
+# order_3_discount = 0.2
+# discount_amount_3 = order_3_price * order_3_discount
+# order_3_final_price = round(order_3_price * order_3_quantity * (1 - order_3_discount), 2)
+# print("Заказ 3: ")
+# print("Исходная цена: " + str(order_3_price * order_3_quantity) + " руб.")
+# print("Размер скидки: " + str(discount_amount_3) + " руб.")
+# print("Итоговая стоимость: " + str(order_3_final_price) + " руб.")
+
+
+
+# ===== Задача 4 =====
+# order_total = 6000
+# if order_total > 0:
+#     if order_total > 10000:
+#         price_after_discount = round(order_total * 0.8, 2)
+#     elif order_total > 5000:
+#         price_after_discount = round(order_total * 0.9, 2)
+#     else: 
+#         price_after_discount = round(order_total * 0.95, 2)
+#     discount_percentage = round((1 - price_after_discount / order_total) * 100)
+#     print("Исходная сумма заказа: " + str(order_total) + " руб.")
+#     print("Размер скидки: " + str(discount_percentage) + "%")
+#     print("Размер скидки в рублях: " + str(order_total - price_after_discount) + " руб.")
+#     print("Сумма заказа со скидкой: " + str(price_after_discount) + " руб.")
+# else:
+#     print("Сумма заказа не должна быть меньше нуля!")
+
+
+
+# ===== Задача 5 =====
+# user_age = 17
+# user_balance = 500
+# order_total = 1000
+# requested_qty = 3
+# in_stock = 5
+
+# if user_age >= 18:
+#     if user_balance >= order_total:
+#         if in_stock >= requested_qty:
+#             print("Заказ можно оформить!")
+#         else:
+#             print("Товара нет или недостаточно на складе!")
+#     else:
+#         print("Недостаточно средств на счету!")
+# else:
+#     print("Отказ: пользователь несовершеннолетний")
+
+
+
+# ===== Задача 6 =====
+# order_total = 3500
+# city = "Казань"
+# if order_total > 5000:
+#     delivery_free = 0
+#     print("Доставка бесплатная!")
+# elif city == "Москва" or city == "Санкт-Петербург":
+#     delivery_free = 300
+#     print("Стоимость доставки: " + str(delivery_free) + " руб.")
+# else:
+#     delivery_free = 500
+#     print("Стоимость доставки: " + str(delivery_free) + " руб.")  
+
+
+
+# ===== Задача 7 =====
+# price_1 = 500
+# price_2 = 1500
+# price_3 = 800
+# price_4 = 2000
+# price_5 = 1200
+# price_count = 0
+
+# print("Товары с ценой больше 1000:")
+
+# for i in range(1, 6):
+#     if i == 1:
+#         price = price_1
+#     elif i == 2:
+#         price = price_2
+#     elif i == 3:
+#         price = price_3
+#     elif i == 4:
+#         price = price_4
+#     else:
+#         price = price_5
+#     if price > 1000:
+#         price_count += 1
+#         print(f"Товар {i}: {price}")
+
+# if price_count == 0:
+#     print("Товаров с ценой больше 1000 не найдено.")
+
+# max_price = max(price_1, price_2, price_3, price_4, price_5)
+# max_index = [price_1, price_2, price_3, price_4, price_5].index(max_price) + 1
+
+# print(f"Количество товаров с ценой больше 1000: {price_count}")
+# print(f"Товар с максимальной ценой: Товар {max_index}: {max_price} руб.")
+
+
+
+# ===== Задача 8 =====
+# prices = [1500, 2300, 890, 4500, 1200]
+
+# prices.sort(reverse=True)
+# max_price = max(prices)
+# min_price = min(prices)
+# print("Отсортированные цены: " + str(prices))
+# print("Максимальная цена: " + str(max_price))
+# print("Минимальная цена: " + str(min_price))
+
+
+
+# ===== Задача 9 =====
+# orders = [1500, 2300, 890]
+# new_orders = orders.copy()
+# new_orders.append(4500)
+# print(f"Текущие заказы: {new_orders}")
+# print(f"Архив заказов: {orders}")
+
+
+
+# ===== Задача 10 =====
+# shopping_cart = []
+
+# shopping_cart.append(["Планшет", 20000])
+# shopping_cart.append(["Ноутбук", 50000])
+# shopping_cart.append(["Смартфон", 30000])
+# print("Корзина после добавления товаров: " + str(shopping_cart))
+# shopping_cart.remove(["Смартфон", 30000])
+# print("Корзина после удаления товара: " + str(shopping_cart))
+# shopping_cart.sort(key=lambda x: x[1], reverse=True)
+# print("Корзина после сортировки: " + str(shopping_cart))
+
+# print("Текущая корзина: " + str(shopping_cart))
+# print("Самый дорогой товар: " + str(max(shopping_cart, key=lambda x: x[1])))
+
+
+
+# ===== Задача 11 =====
+# product = {
+#     "name": "Ноутбук",
+#     "price": 50000,
+#     "quantity": 5
+#     }
+# product["quantity"] = 10
+# dict_keys = product.keys()
+# dict_values = product.values()
+# print("Ключи словаря: " + str(dict_keys))
+# print("Значения словаря: " + str(dict_values))
+
+
+
+# ===== Задача 12 =====
+# catalog = [["Ноутбук", 50000], ["Мышь", 1500], ["Клавиатура", 3000]]
+# catalog_dict = {item[0]: item[1] for item in catalog}
+# print("Словарь цен: " + str(catalog_dict))
+# print("Цена мыши: " + str(catalog_dict.get("Мышь")))
+
+
+
+# ===== Задача 13 =====
+# users = {}
+
+# products = {
+#     "Ноутбук": {
+#         "price": 50000,
+#         "category": "Электроника"
+#     },
+#     "Мышь": {
+#         "price": 1500,
+#         "category": "Аксессуары"
+#     }
+# }
+# visitors = set()
+
+# users["user_123"] = {
+#     "name": "Иван",
+#     "email": "ivan@test.ru"
+# }
+# visitors.add("user_123")
+
+# print("Цена товара 'Ноутбук': " + str(products.get("Ноутбук").get("price")))
+# print("Пользователь добавлен: " + str(users.get("user_123")))
+# print("Посетитель 'user_123' был на сайте: " + str("user_123" in visitors))
+
+
+
+# ===== Задача 14 =====
+# x = 10
+# y = 20
+# location = x, y
+# k1 = location[0]
+# k2 = location[1]
+# my_dict = {(k1, k2): "Офис"}
+# print("Координата x: " + str(k1))
+# print("Координата y: " + str(k2))
+# print("Название места: " + str(my_dict.get((k1, k2))))
+
+
+
+# ===== Задача 15 =====
+# dict_coordinates = {}
+# dict_coordinates[1] = (55.7558, 37.6173)
+# dict_coordinates[2] = (59.9343, 30.3351)
+# print("Координаты заказа 1: " + str(dict_coordinates.get(1)))
+# Latitude, Longitude = dict_coordinates.get(1)
+# print("Широта: " + str(Latitude))
+# print("Долгота: " + str(Longitude))
+# print("Координаты заказа 3: " + str(dict_coordinates.get(3) or "Заказ не найден"))
+
+
+
+# ===== Задача 16 =====
+# def calculate_price(price, discount_percent):
+#     new_price = round(price * (1 - discount_percent / 100), 2)
+#     return new_price
+
+# print("Цена товара 1 со скидкой: " + str(calculate_price(1000, 10)))
+# print("Цена товара 2 со скидкой: " + str(calculate_price(5000, 15)))
+
+
+
+# ===== Задача 17 =====
+# def sum_all(*args):
+#     all_sum = 0
+#     for i in range(len(args)):
+#         all_sum += args[i]
+#     if not args:
+#         print(f"Сумма без аргументов: {all_sum}")
+#     return all_sum
+
+# print("Сумма двух чисел: " + str(sum_all(150, 150)))
+# print("Сумма пяти чисел: " + str(sum_all(300, 300, 300, 300, 300)))
+# sum_all()
+
+
+
+# ===== Задача 18 =====
+# def describe_product(name, **kwargs):
+
+#     if not kwargs:
+#         return name + " ()"
+#     params = [f"{k}: {v}" for k, v in kwargs.items()]
+#     return name + " (" + ", ".join(params) + ")"
+
+# print(describe_product("Ноутбук", цена=50000, бренд="Lenovo", цвет="черный", вес="2.1 кг"))
+# print(describe_product("Мышь", цвет="черный"))
+# print(describe_product("Клавиатура"))
+
+
+
+# ===== Задача 19 =====
+# def calculate_order_total(price, quantity, discount):
+#     total = (price * quantity) * (1 - discount)
+#     return round(total, 2)
+
+# def check_stock_availability(stock_quantity, required_quantity):
+#     status = stock_quantity >= required_quantity
+#     return f"Товар доступен: {status}"
+
+# def format_order_info(order_id, total):
+#     return f"Информация о заказе: Заказ #{order_id}, Сумма: {total} руб."
+
+# stock_status_string = check_stock_availability(10, 3)
+# print(stock_status_string)
+
+# if "True" in stock_status_string:
+#     order_total = calculate_order_total(1000, 3, 0.1)
+#     order_info = format_order_info(1, order_total)
+#     print(order_info)
+
+
+
+# ===== Задача 20 =====
+# def safe_order_total(items: list):
+#     total = 0
+#     processed_count = 0
+#     for item in items:
+#         try:
+#             name = item.get("name")
+#             price = int(item["price"])
+#             quantity = int(item["quantity"])
+#             if quantity == 0:
+#                 raise ZeroDivisionError
+#             prices = price * quantity
+#             total += prices
+#             print(f"{name}: {prices} руб.")
+#             processed_count += 1
+#             continue
+#         except KeyError:
+#             print(f"Ошибка в товаре {name}: отсутствует обязательное поле")
+#         except TypeError:
+#             print(f"Ошибка в товаре {name}: неверный тип данных для расчета")
+#         except ZeroDivisionError:
+#             print(f"Ошибка в товаре {name}: количество не может быть нулем")
+#     print(f"Обработано товаров: {processed_count}, из {len(items)}")
+#     return total     
+
+# test_items = [
+#     {"name": "Ноутбук", "price": 50000, "quantity": 1},
+#     {"name": "Мышь", "price": 1500, "quantity": 2},
+#     {"name": "Клавиатура"},
+#     {"name": "Монитор", "price": None, "quantity": 1},
+#     {"name": "Наушники", "price": 3000, "quantity": 3}
+#     ]
+
+# result = safe_order_total(test_items)
+# print("Общая стоимость: " + str(result))
+
+
+
+# ===== Задача 21 =====
+# def validate_user_data(user_data):
+#     name = user_data["name"]
+#     age = user_data["age"]
+#     email = user_data["email"]
+#     phone = user_data["phone"]
+#     error_count = False
+    
+#     try:
+#         if name:
+#             print("Имя: OK")
+#         else:
+#             raise ValueError
+#     except ValueError as e:
+#         print(f"Имя: ошибка - имя не может быть пустым")
+#         error_count = True
+#     try:
+#         if isinstance(age, str):
+#             age = int(age)
+#             if age >= 18 and age <= 120:
+#                 print(f"Возраст: OK ({age})")
+#             else:
+#                 raise ValueError
+#     except ValueError:
+#         print(f"Возраст: ошибка - невозможно преобразовать в число") 
+#         error_count = True
+
+#     try:
+#         if "@" in email:
+#             print("Email: OK")
+#         else:
+#             raise ValueError
+#     except ValueError:
+#         print(f"Email: ошибка - email должен содержать символ @")
+#         error_count = True
+        
+#     try:
+#         if phone.isdigit():
+#             print("Телефон: OK")
+#         else:            
+#             raise ValueError
+#     except ValueError:
+#         print(f"Телефон: ошибка - телефон должен содержать только цифры")
+#         error_count = True
+        
+#     if error_count:
+#         print("Результат: найдены ошибки")
+#     else:
+#         print("Результат: все поля корректны")
+        
+# user_1 = {"name": "Иван Петров", "age": "25", "email": "ivan@sfmshop.ru", "phone": "89001234567"}
+# user_2 = {"name": "", "age": "молодой", "email": "неверный_email", "phone": "89oo1234567"}
+
+# print("Проверка пользователя 1:")
+# result_1 = validate_user_data(user_1)
+
+# print("Проверка пользователя 2:")
+# result_2 = validate_user_data(user_2)
+
+
+
+# ===== Задача 22 =====
+# def add_to_cart(cart, name, price, quantity):
+#     try:
+#         if not name:
+#             raise ValueError
+#     except ValueError:
+#         print("Ошибка: название товара не может быть пустым")
+#         return
+#     try:
+#         if price < 0 or quantity < 0:
+#             raise ValueError
+#     except ValueError:
+#         print("Ошибка: цена и количество должны быть положительными")
+#         return
+   
+#     cart.append({
+#         "name": name,
+#         "price": price,
+#         "quantity": quantity
+#     })
+#     print(f"Добавлен: {name} ({price} руб. x {quantity})")
+#     return
+    
+# def remove_from_cart(cart, index):
+#     try:
+#         if index < 0 or index >= len(cart):
+#             raise IndexError
+#     except IndexError:
+#         print("Ошибка: товар с индексом " + str(index) + " не найден")
+#         return
+    
+#     removed = cart.pop(index)
+#     print(f"Удален: {removed['name']}")
+        
+# def get_cart_summary(cart):
+#     print("--- Корзина ---")
+#     if not cart:
+#         print("Корзина пуста")
+#         return
+#     for i, item in enumerate(cart):
+#         print(f"{i+1}. {item['name']} ({item['price']} руб. x {item['quantity']})")
+#     summary = sum(item['price'] * item['quantity'] for item in cart)
+#     print(f"Итого: {summary} руб. (товаров: {len(cart)})")
+
+# cart = []
+# add_to_cart(cart, "Ноутбук", 50000, 1)
+# add_to_cart(cart, "Мышь", 1500, 2)
+# add_to_cart(cart, "", 3000, 1)
+# add_to_cart(cart, "Наушники", -500, 1)
+# remove_from_cart(cart, 1)
+# remove_from_cart(cart, 10)
+# get_cart_summary(cart)
+
+
+
+# ===== Задача 23 =====
+# with open("products.txt", "w", encoding="utf-8") as file:
+#     data = file.write("Ноутбук\nМышь\nКлавиатура")
+    
+# with open("products.txt", "r", encoding="utf-8") as file:
+#     lines = file.readlines()
+
+# with open("products_with_prices.txt", "w", encoding="utf-8") as file:
+#     for line in lines:
+#         file.write(line.strip() + " - 1000 руб.\n")
+        
+        
+        
+# ===== Задача 24 =====
+# with open("orders.txt", "w", encoding="utf-8") as file:
+#     file.write("1:1000:новый\n")
+#     file.write("2:2000:обработан\n")
+#     file.write("3:1500:новый\n")
+#     file.write("4:3000:новый\n")
+    
+
+
+# ===== Задача 25 =====
+# try:
+#     with open("orders.txt", "r", encoding="utf-8") as file:
+#         lines = file.readlines()
+# except FileNotFoundError:
+#         print("Файл orders.txt не найден.")
+#         lines = []
+
+# total = 0
+# total_price = 0
+# for line in lines:
+#     if "новый" in line:
+#         total += 1
+#         first_count = line.find(":")
+#         order_id = line[:first_count]
+#         f_price = line.find(":", first_count + 1)
+#         order_price = line[first_count + 1:f_price]
+#         total_price += int(order_price)
+# print(f"Обработано заказов: {total}")
+# print(f"Общая сумма: {total_price} руб.")
+# with open("processed_orders.txt", "w", encoding="utf-8") as file:
+#     file.write(f"Обработано заказов: {total}\n")
+#     file.write(f"Общая сумма: {total_price} руб.\n")
+    
+        
+
+# ===== Задача 26 =====
+# from utils.calculations import calculate_discount
+# discount_amount = calculate_discount(1000, 0.1)
+# print(f"Скидка для товара 1: {discount_amount} ")
+# discount_amount = calculate_discount(5000, 0.15)
+# print(f"Скидка для товара 2: {discount_amount} ")
+
+
+
+# ===== Задача 27 =====
+# from utils.validators import validate_age, validate_email
+# from utils.calculations import calculate_discount, calculate_delivery, calculate_final_price
+
+# val_age = validate_age(20)
+# if val_age:
+#     print(f"Возраст валиден: {val_age}")
+# else:
+#     print(f"Возраст не валиден: {val_age}")
+
+# val_email = validate_email("ivan@test.ru")
+# if val_email:
+#     print(f"Email валиден: {val_email}")
+# else:
+#     print(f"Email не валиден: {val_email}")
+
+# if val_age and val_email:
+#     price_discount = calculate_discount(1000, 0.1)
+#     price_delivery = calculate_delivery(5)
+#     new_price = calculate_final_price(1000, price_discount, price_delivery)
+#     print(f"Итоговая стоимость заказа: {new_price} руб.")
+
+
+
+# ===== Задача 28 =====
+# DISCOUNT_RATE = 0.1
+
+# def calculate_price_with_discount(price):
+#     price_discount = price * (1 - DISCOUNT_RATE)
+#     return price_discount
+
+# print(f"Цена со скидкой 10%: {calculate_price_with_discount(1000)}")
+
+# def update_discount_rate():
+#     global DISCOUNT_RATE
+#     DISCOUNT_RATE = 0.2
+    
+# update_discount_rate()    
+# print(f"Цена со скидкой 20%: {calculate_price_with_discount(1000)}")
+
+
+
+# ===== Задача 29 =====
+# BASE_DISCOUNT = 0.1
+# BASE_DELIVERY_COST = 100
+
+# def calculate_order_price(price, quantity):
+#     subtotal = price * quantity
+#     discount = subtotal * BASE_DISCOUNT
+#     total = subtotal - discount + BASE_DELIVERY_COST
+#     return round(total, 2)
+
+# def update_discount(new_discount):
+#     global BASE_DISCOUNT
+#     BASE_DISCOUNT = new_discount
+    
+# print(f"Стоимость заказа (скидка 10%): {calculate_order_price(1000, 2)}")
+
+# update_discount(0.15)
+# print(f"Стоимость заказа (скидка 15%): {calculate_order_price(1000, 2)}")
+
+
+
+# ===== Задача 30 =====
+# def format_info(name, price, quantity):
+#     return f"Товар: {name}, Цена: {price} руб., Количество: {quantity}"
+
+# print("Информация о товаре: " + format_info("Ноутбук", 50000, 10))
+
+# products = ["Ноутбук", "Мышь", "Клавиатура"]
+# products_s = ", ".join(products)
+# print("Товары: " + products_s)
+
+# price = 1234.5
+# print(f"Цена: {price:.2f} руб.")
+
+
+
+# ===== Задача 31 =====
+# from datetime import datetime
+
+# order_time = datetime(2024, 1, 15, 10, 0, 0)
+# date_diff = datetime(2024, 1, 18, 10, 0, 0)
+# days_diff = (date_diff - order_time).days
+# print("Текущая время: " + datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+# print("Дата заказа: " + order_time.strftime("%Y-%m-%d %H:%M:%S"))
+# print("Дата доставки: " + date_diff.strftime("%Y-%m-%d %H:%M:%S"))
+# print("Дней до доставки: " + str(days_diff))
+
+
+
+# ===== Задача 32 =====
+# from datetime import date
+
+# start = date(2026, 12, 1)
+# deadline = date(2026, 12, 31)
+# days_diff = (deadline - start).days
+# print("До дедлайна: " + str(days_diff) + " дней")
+
+
+
+# ===== Задача 33 =====
+# from datetime import datetime, timedelta
+
+# def order_creation(order_date, order_number):
+#     return f"Заказ #{order_number} создан: " + order_date.strftime("%Y-%m-%d %H:%M:%S")
+
+# def calculate_delivery_date(order_date):
+#     delivery_date = order_date + timedelta(days=3)
+#     return delivery_date
+
+# print("Дата доставки: " + calculate_delivery_date(datetime(2024, 1, 15, 10, 0, 0)).strftime("%Y-%m-%d %H:%M:%S"))
+# print(order_creation(datetime(2024, 1, 15, 14, 30, 0), 123))
+
+
+# import re
+
+# def valid_mail(email):
+#     pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+#     if re.match(pattern, email):
+#         return True
+#     else:
+#         return False
+    
+# print(f"Email 'ivan@example.ru' валиден: {valid_mail('ivan@example.ru')}")
+# print(f"Email 'invalid' валиден: {valid_mail('invalid')}")
+# print(f"Email 'test@' валиден: {valid_mail('test@')}")
+
+
+
+# ===== Задача 34 =====
+# import re
+
+# text = "Ноутбук 50000, мышь 800, клавиатура 1500"
+
+# pattern = r"(\w+)\s+(\d+)"
+# matches = re.findall(pattern, text)
+
+# for match in matches:
+#     product_price = match[1]
+    
+#     print(f"Найдены цены: {product_price} руб.")
+    
+    
+
+# ===== Задача 35 =====
+# import re
+
+# def validate_email_regex(email):
+#     pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+#     if re.fullmatch(pattern, email):
+#         return True
+#     else:
+#         return False
+    
+# def validate_phone_regex(phone):
+#     pattern = r'^(\+7|7|8)?\s*\(?\d{3}\)?\s*\d{3}[- ]?\d{2}[- ]?\d{2}'
+#     if re.fullmatch(pattern, phone):
+#         return True
+#     else:
+#         return False
+    
+# def clean_input(input_string):
+#     cleaned_string = re.sub(r"[^\w\s.]", "", input_string)
+#     return cleaned_string.strip()   
+    
+# def extract_email_from_text(text):
+#     pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+#     matches = re.search(pattern, text)
+#     if matches:
+#         return matches.group(0)
+#     return None
+
+# print(f"Email валиден: {validate_email_regex('ivan@test.ru')}")
+# print(f"Телефон валиден: {validate_phone_regex('+7 999 123-45-67')}")
+# print(f"Очищенный текст: {clean_input('Заказ 123! Сумма 5000 руб?.')}")
+# print(f"Извлеченный email: {extract_email_from_text('Пожалуйста, свяжитесь с нами по адресу support@example.ru')}")
+
+
+
+# ===== Задача 36 =====
+# from src.utils.order_processor import process_order_file
+# process_order_file('data/orders.txt', 'data/processed_orders_report.txt')
+
+
+
+# ===== Задача 37 =====
+# from src.models.product import Product
+# from src.models.user import User
+# from src.models.order import Order
+
+# user1 = User("Иван Иванов", "ivan@test.ru")
+# product1 = Product("Ноутбук", 53000, 1)
+# order1 = Order(user1, [product1])
+
+# print(user1.get_info())
+# print(f"Общая стоимость заказа: {order1.calculate_total()}")
+
+
+
+# ===== Задача 38 =====
+# class Delivery:
+#     def __init__(self):
+#         pass
+
+#     def get_description(self):
+#         pass
+    
+# class StandardDelivery(Delivery):
+#     def get_description(self):
+#         return f"Стандартная доставка: 3-5 дней"
+    
+# class ExpressDelivery(Delivery):
+#     def get_description(self):
+#         return f"Экспресс-доставка: 1 день"
+        
+# order1 = StandardDelivery()
+# order2 = ExpressDelivery()
+
+# print(order1.get_description())
+# print(order2.get_description())
+
+
+
+# ===== Задача 39 =====
+# class Product:
+#     def __init__(self, name, price):
+#         self.name = name
+#         self._price = price
+
+#     def final_price(self):
+#         return self._price
+    
+# class DiscountProduct(Product):
+#     def __init__(self, name, price, discount):
+#         super().__init__(name, price)
+#         self.__discount = discount
+#     def final_price(self):
+#         discounted_price = self._price * (1 - self.__discount)
+#         return discounted_price
+    
+# class GiftProduct(Product):
+#     def __init__(self, name, price):
+#         super().__init__(name, price)
+
+#     def final_price(self):
+#         return 0
+    
+# product1 = Product("Кружка", 500)
+# product2 = DiscountProduct("Футболка", 1000, 0.2)
+# product3 = GiftProduct("Открытка", 150)
+# products = [product1, product2, product3]
+# for product in products:
+#     print(f"{product.name}: {product.final_price()} руб.")
+
+
+
+# ===== Задача 40 =====
+# from src.models.payment import Payment, CardPayment, PayPalPayment
+    
+# pay1 = CardPayment("1234567890123456", 1000)
+# pay2 = PayPalPayment("user@paypal.com", 2000)
+# payments = [pay1, pay2]
+# for payment in payments:
+#     print(payment.process_payment())
+
+
+
+# ===== Задача 41 =====
+# class Cart:
+#     def __init__(self, owner, items):
+#         self.owner = owner
+#         self.items = items
+    
+#     def __len__(self):
+#         return len(self.items)
+    
+#     def __add__(self, other):
+#         if self.owner == other.owner:
+#             new_items = self.items + other.items
+#             return Cart(self.owner, new_items)
+    
+#     def __str__(self):
+#         return f"Корзина {self.owner}: {len(self)} товаров на {sum(self.items)} руб."
+    
+# cart1 = Cart("Иван", [4000, 3000])
+# cart2 = Cart("Иван", [40000, 10000])
+# cart3 = Cart("Иван", (cart1 + cart2).items)
+# print(len(cart1))
+# print(len(cart3))
+# print(cart3)
+
+
+
+# ===== Задача 42 =====
+# from src.models.product import Product
+# from src.models.order import Order
+
+# products = []
+
+# product1 = Product("Ноутбук", 50000, 10)
+# products.append(product1)
+# product2 = Product("Мышь", 1500, 20)
+# products.append(product2)
+# product3 = Product("Клавиатура", 3000, 15)
+# products.append(product3)
+# order1 = Order(1, "Иван", [product1], 1)
+# products.sort()
+
+# for product in products:
+#     print(str(product))
+
+# print(order1)
+
+
+
+# ===== Задача 43 =====
+# def calculate(a, b):
+#     try:
+#         res = a / b
+#         return f"Результат: {res}"
+#     except ZeroDivisionError:
+#         print("Ошибка: деление на ноль!")
+#         return None
+#     except TypeError:
+#         print("Ошибка: неверный тип данных!")
+#         return None
+    
+# print(calculate(10, 2))
+# print(calculate(10, 0))
+# print(calculate(10, "a"))
+
+
+
+# ===== Задача 44 =====
+# class OutOfStockError(Exception):
+#     def __init__(self, message="Недостаточно товара:"):
+#         self.message = message
+#         super().__init__(self.message)
+
+# class Order:
+#     def __init__(self, quantity):
+#         self.quantity = quantity
+        
+#     def reserve(self, quantity):
+#         if quantity <= 0:
+#             raise ValueError("Количество должно быть больше нуля")
+#         if quantity > self.quantity:
+#             raise OutOfStockError(f"Недостаточно товара: запрошено {quantity}, в наличии {self.quantity}")
+#         self.quantity -= quantity
+#         return f"Зарезервировано {quantity}, осталось {self.quantity}"
+
+# order1 = Order(5)
+
+# requests = [3, 10, 0]
+
+# for req in requests:
+#     try:
+#         print(order1.reserve(req))
+#     except ValueError as ve:
+#         print("Ошибка ввода: " + str(ve))
+#     except OutOfStockError as e: 
+#         print(f"Нет на складе: {e}")
+
+
+# ===== Задача 45 =====
+# from models.product import Product
+# from models.exceptions import ValidationError, BusinessLogicError
+# from models.order import Order
+# from models.user import User
+
+# try:
+#     product1 = Product("Ноутбук", 50000, 10)
+#     product2 = Product("Мышь", -5, 20)
+# except ValidationError as error:
+#     print("Ошибка валидации: " + str(error))
+    
+# try:
+#     product1.sell(100)
+# except BusinessLogicError as error:
+#     print("Ошибка бизнес-логики: " + str(error))
+
+# try:    
+#     order1 = Order(1, 1, [])
+#     order1.create_order()
+# except BusinessLogicError as error:
+#     print("Ошибка бизнес-логики: " + str(error))
+
+
+
+
+
+# ===== Задача 46 =====
+# class SFMShopException(Exception):
+#     def __init__(self, message="Ошибка SFMShop"):
+#         self.message = message
+#         super().__init__(self.message)
+        
+# class InsufficientStockError(SFMShopException):
+#     def __init__(self, message="Ошибка склада:"):
+#         super().__init__(message)
+        
+# class InvalidQuantityError(SFMShopException):
+#     def __init__(self, message="Ошибка проекта:"):
+#         super().__init__(message)
+
+# class Product:
+#     def __init__(self, name, price, quantity):
+#         self.name = name
+#         self.price = price
+#         self.quantity = quantity
+        
+#     def sell(self, amount):
+#         if amount <= 0:
+#             raise InvalidQuantityError(f"Количество должно быть больше нуля, получено: {amount}")
+#         if amount > self.quantity:
+#             raise InsufficientStockError(f"Товара недостаточно. На складе: {self.quantity}, требуется: {amount}")
+#         self.quantity -= amount
+#         return f"Продано {amount} шт. товара '{self.name}'. Остаток: {self.quantity}"
+
+# def process_order(name, price, quantity, requests):
+#     product = Product(name, price, quantity)
+    
+#     for req in requests:
+#         try:
+#             print(product.sell(req))
+#         except InsufficientStockError as ise:
+#             print("Ошибка склада: " + str(ise))
+#         except SFMShopException as iqe:
+#             print("Ошибка проекта: " + str(iqe))
+        
+# process_order("Ноутбук", 50000, 10, [3, 100, -5, 7])
+
+
+
+from models.exceptions import ValidationError
+from models.product import Product
+from models.user import User
+from models.order import Order
+from models.payment import CardPayment, PayPalPayment
+
+def process_order_system():
+    user = User("Иван", "ivan@test.com")
+    product1 = Product("Ноутбук", 50000, 2)
+    product2 = Product("Мышь", 1500, 3)
+    order = Order(user, [product1, product2])
+    total = order.calculate_total()
+    print(f"Общая стоимость заказа: {total}")
+    payments = [
+    CardPayment(1000, "1234 5678 9012 3456"),
+    PayPalPayment(2000, "test@paypal.com")
+    ]
+    for payment in payments:
+        print(payment.process_payment())
+    sorted_products = sorted([product1, product2])
+    for product in sorted_products:
+        print(product)
+    try:
+        product1.set_price(-1000)
+    except ValidationError as e:
+        print("Ошибка валидации:", e)
+    print(order)
+    
+process_order_system()
