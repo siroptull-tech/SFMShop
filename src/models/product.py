@@ -19,6 +19,13 @@ class Product:
     def get_total_price(self, discount=0.0, tax=0.0):
         return round(self.price * self.quantity * (1 - discount) * (1 + tax), 2)
     
+    def get_category(self):
+        if self.price >= 30000:
+            return "Премиум"
+        if self.price >= 5000:
+            return "Средний сегмент"
+        return "Эконом"
+
     def __lt__(self, other):
         if isinstance(other, Product):
             return self.price < other.price
