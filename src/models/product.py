@@ -26,6 +26,13 @@ class Product:
             return 150
         return round(150 + (weight_kg - 1) * 50, 2)
 
+    def get_category(self):
+        if self.price >= 30000:
+            return "Премиум"
+        if self.price >= 5000:
+            return "Средний сегмент"
+        return "Эконом"
+
     def __lt__(self, other):
         if isinstance(other, Product):
             return self.price < other.price
