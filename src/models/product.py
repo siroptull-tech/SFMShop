@@ -17,7 +17,8 @@ class Product:
         self.quantity -= amount
         
     def get_total_price(self):
-            return self.price * self.quantity
+        discount = 0.1
+        return round(self.price * self.quantity * (1 - discount), 2)
     
     def __lt__(self, other):
         if isinstance(other, Product):
