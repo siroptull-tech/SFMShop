@@ -19,6 +19,13 @@ class Product:
     def get_total_price(self, discount=0.0, tax=0.0):
         return round(self.price * self.quantity * (1 - discount) * (1 + tax), 2)
     
+    def calculate_shipping(self, weight_kg):
+        if weight_kg <= 0:
+            raise ValidationError("Вес товара должен быть больше нуля")
+        if weight_kg <= 1:
+            return 150
+        return round(150 + (weight_kg - 1) * 50, 2)
+
     def __lt__(self, other):
         if isinstance(other, Product):
             return self.price < other.price
