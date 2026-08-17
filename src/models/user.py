@@ -16,3 +16,6 @@ class User:
         
     def create(self):
         return f"Пользователь: {self.username}, Email: {self._email}"
+
+    def get_info(self):
+        return f"[User] {self.username} | {self._email}"
