@@ -18,6 +18,17 @@ class Product:
         
     def get_total_price(self):
             return self.price * self.quantity
+
+    def check_stock(self, required_quantity):
+        if self.quantity >= required_quantity:
+            return f"Товар '{self.name}' в наличии: {self.quantity} шт."
+        return f"Товара '{self.name}' недостаточно: в наличии {self.quantity} шт., требуется {required_quantity} шт."
+
+    def update_stock(self, amount):
+        if amount < 0 and abs(amount) > self.quantity:
+            raise InsufficientStockError(f"Нельзя списать {abs(amount)} шт., на складе только {self.quantity} шт.")
+        self.quantity += amount
+        return f"Остаток товара '{self.name}' обновлён: {self.quantity} шт."
     
     def __lt__(self, other):
         if isinstance(other, Product):
