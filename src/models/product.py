@@ -17,7 +17,6 @@ class Product:
         self.quantity -= amount
         
     def get_total_price(self):
-        # объединили обе ветки: скидка, затем округление
         return round(self.price * self.quantity * 0.9, 2)
     
     def get_category(self):
