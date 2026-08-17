@@ -1,0 +1,28 @@
+*   f348b3a Объединены изменения из main
+|\  
+| * 2342a9a Добавлен метод get_category в Product
+* | 437d7b5 Добавлен метод calculate_shipping в Product
+|/  
+| * 8c2e557 Добавлен метод apply_discount в Product
+|/  
+* 56027bd Обновлён класс User
+*   effff8f Разрешен конфликт в get_total_price
+|\  
+| * 0460664 Изменен метод get_total_price в feature/test-conflict
+* | b8170cf Изменен метод get_total_price в main
+|/  
+* 5eb25ca Удалён файл my_main.py
+| * 0cba897 Удалён файл my_main.py
+| * 6c65fc5 Добавлены методы управления складом в класс Product
+|/  
+| * 6e15d6e Добавлена валидация email в класс User: рефакторинг и исправления
+| * 5887478 Добавлена валидация email в класс User
+|/  
+| * 0fab7e9 Добавлена система скидок в класс Product
+|/  
+* 15bb178 Добавлены модели SFMShop
+* 5a68ed9 Добавлен базовый код SFMShop
+* 51f7fcb Добавлена структура для моделей
+* 62d35ea Добавлен .gitignore для проекта SFMShop
+* 2d0f78c Добавлен NOTES.md с конспектом по git
+* 3f60eed Инициализация проекта SFMShop

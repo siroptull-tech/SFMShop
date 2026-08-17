@@ -1,0 +1,29 @@
+diff --git a/src/models/product.py b/src/models/product.py
+index a60b6fb..7e87352 100644
+--- a/src/models/product.py
++++ b/src/models/product.py
+@@ -16,9 +16,8 @@ class Product:
+             raise InsufficientStockError(f"Товара недостаточно. На складе: {self.quantity}, требуется: {amount}")
+         self.quantity -= amount
+         
+-    def get_total_price(self):
+-        # объединили обе ветки: скидка, затем округление
+-        return round(self.price * self.quantity * 0.9, 2)
++    def get_total_price(self, discount=0.0, tax=0.0):
++        return round(self.price * self.quantity * (1 - discount) * (1 + tax), 2)
+     
+     def get_category(self):
+         if self.price >= 30000:
+diff --git a/src/utils/cache.py b/src/utils/cache.py
+new file mode 100644
+index 0000000..d754a8a
+--- /dev/null
++++ b/src/utils/cache.py
+@@ -0,0 +1,7 @@
++_cache = {}
++
++def get(key):
++    return _cache.get(key)
++
++def set(key, value):
++    _cache[key] = value
