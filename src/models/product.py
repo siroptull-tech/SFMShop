@@ -17,7 +17,8 @@ class Product:
         self.quantity -= amount
         
     def get_total_price(self):
-        return self.price * self.quantity
+        # ветка feature/round-price: округляем сумму до двух знаков
+        return round(self.price * self.quantity, 2)
     
     def get_category(self):
         if self.price >= 30000:
