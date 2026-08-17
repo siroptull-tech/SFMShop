@@ -17,8 +17,8 @@ class Product:
         self.quantity -= amount
         
     def get_total_price(self):
-        # ветка feature/add-discount: цена со скидкой
-        return self.price * self.quantity * 0.9
+        # объединили обе ветки: скидка, затем округление
+        return round(self.price * self.quantity * 0.9, 2)
     
     def get_category(self):
         if self.price >= 30000:
