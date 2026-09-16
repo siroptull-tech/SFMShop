@@ -1014,32 +1014,123 @@
 
 
 
-from models.exceptions import ValidationError
-from models.product import Product
-from models.user import User
-from models.order import Order
-from models.payment import CardPayment, PayPalPayment
+# ===== Задача 47 =====
+# from models.exceptions import ValidationError
+# from models.product import Product
+# from models.user import User
+# from models.order import Order
+# from models.payment import CardPayment, PayPalPayment
 
-def process_order_system():
-    user = User("Иван", "ivan@test.com")
-    product1 = Product("Ноутбук", 50000, 2)
-    product2 = Product("Мышь", 1500, 3)
-    order = Order(user, [product1, product2])
-    total = order.calculate_total()
-    print(f"Общая стоимость заказа: {total}")
-    payments = [
-    CardPayment(1000, "1234 5678 9012 3456"),
-    PayPalPayment(2000, "test@paypal.com")
-    ]
-    for payment in payments:
-        print(payment.process_payment())
-    sorted_products = sorted([product1, product2])
-    for product in sorted_products:
-        print(product)
-    try:
-        product1.set_price(-1000)
-    except ValidationError as e:
-        print("Ошибка валидации:", e)
-    print(order)
-    
-process_order_system()
+# def process_order_system():
+#     user = User("Иван", "ivan@test.com")
+#     product1 = Product("Ноутбук", 50000, 2)
+#     product2 = Product("Мышь", 1500, 3)
+#     order = Order(user, [product1, product2])
+#     total = order.calculate_total()
+#     print(f"Общая стоимость заказа: {total}")
+#     payments = [
+#     CardPayment(1000, "1234 5678 9012 3456"),
+#     PayPalPayment(2000, "test@paypal.com")
+#     ]
+#     for payment in payments:
+#         print(payment.process_payment())
+#     sorted_products = sorted([product1, product2])
+#     for product in sorted_products:
+#         print(product)
+#     try:
+#         product1.set_price(-1000)
+#     except ValidationError as e:
+#         print("Ошибка валидации:", e)
+#     print(order)
+
+# process_order_system()
+
+
+
+# ===== Задача 48 =====
+from contextlib import closing
+from database.connection import (
+    connect_to_db,
+    create_user,
+    get_all_products,
+    get_user_by_id,
+)
+from database.queries import (
+    get_order_statistics,
+    get_top_products,
+    get_user_order_history,
+)
+
+def main():
+    with closing(connect_to_db()) as conn:
+        create_user(conn, "Анна", "anna@test.ru")
+
+        get_all_products(conn)
+
+        print("Статистика по пользователям:")
+        for row in get_order_statistics(conn):
+            print(row)
+
+        print("Топ товаров:")
+        for row in get_top_products(conn, limit=5):
+            print(row)
+
+        get_user_by_id(conn, 1)
+
+        print("История заказов пользователя 1:")
+        for row in get_user_order_history(conn, 1):
+            print(row)
+
+
+if __name__ == "__main__":
+    main()
+
+
+# ===== Задача 49 =====
+from http import HTTPStatus
+
+PRODUCTS = {
+    1: {"id": 1, "name": "Ноутбук", "price": 50000},
+    2: {"id": 2, "name": "Мышь", "price": 1500},
+}
+
+
+def handle_request(method, path):
+    parts = path.strip("/").split("/")
+
+    if method == "GET" and parts == ["products"]:
+        status = HTTPStatus.OK
+        names = ", ".join(product["name"] for product in PRODUCTS.values())
+        return status.value, status.phrase, names
+
+    if method == "GET" and len(parts) == 2 and parts[0] == "products":
+        product_id = int(parts[1])
+        if product_id in PRODUCTS:
+            status = HTTPStatus.OK
+            return status.value, status.phrase, PRODUCTS[product_id]["name"]
+        status = HTTPStatus.NOT_FOUND
+        return status.value, status.phrase, f"Товар с id={product_id} не найден"
+
+    if method == "POST" and parts == ["orders"]:
+        status = HTTPStatus.CREATED
+        return status.value, status.phrase, "Заказ создан"
+
+    if method == "DELETE" and len(parts) == 2 and parts[0] == "products":
+        status = HTTPStatus.OK
+        return status.value, status.phrase, "Товар удалён"
+
+    status = HTTPStatus.NOT_FOUND
+    return status.value, status.phrase, "Not found"
+
+
+requests = [
+    ("GET", "/products"),
+    ("GET", "/products/1"),
+    ("GET", "/products/999"),
+    ("POST", "/orders"),
+    ("DELETE", "/products/2"),
+]
+
+for method, path in requests:
+    status, reason, body = handle_request(method, path)
+    print(f"{method} {path} -> {status} {reason} | {body}")
