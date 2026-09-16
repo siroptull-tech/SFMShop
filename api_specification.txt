@@ -1,0 +1,48 @@
+API спецификация SFMShop
+
+Тут описаны только те три endpoints, которые реально спроектированы и проверены на данных проекта.
+
+
+GET /products
+  Параметры: нет
+  Тело запроса: нет
+  Статусы: 200 OK, 500 Internal Server Error
+  Пример запроса:
+    GET /products HTTP/1.1
+    Host: sfmshop.com
+  Пример ответа (200):
+    [
+      {"id": 1, "name": "Ноутбук", "price": 50000},
+      {"id": 2, "name": "Мышь", "price": 1500}
+    ]
+  Пример ответа (500):
+    {"detail": "Внутренняя ошибка сервера"}
+
+
+GET /products/{id}
+  Параметры: id (path, целое число, id товара)
+  Тело запроса: нет
+  Статусы: 200 OK, 404 Not Found
+  Пример запроса:
+    GET /products/1 HTTP/1.1
+    Host: sfmshop.com
+  Пример ответа (200):
+    {"id": 1, "name": "Ноутбук", "price": 50000}
+  Пример ответа (404):
+    {"detail": "Товар не найден"}
+
+
+POST /orders
+  Параметры: нет
+  Тело запроса: {"user_id": int, "product_id": int, "quantity": int}
+  Статусы: 201 Created, 404 Not Found (если такого товара или пользователя нет)
+  Пример запроса:
+    POST /orders HTTP/1.1
+    Host: sfmshop.com
+    Content-Type: application/json
+
+    {"user_id": 1, "product_id": 2, "quantity": 1}
+  Пример ответа (201):
+    {"id": 5, "message": "Заказ создан"}
+  Пример ответа (404):
+    {"detail": "Товар с id=2 не найден"}
